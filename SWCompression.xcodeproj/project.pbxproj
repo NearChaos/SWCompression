@@ -498,8 +498,8 @@
 		06FED40B1DD7717E0013DFB2 /* BZip2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BZip2.swift; sourceTree = "<group>"; };
 		E604F3BF2700C75F004BD38A /* test_dict_B5.lz4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_dict_B5.lz4; sourceTree = "<group>"; };
 		E604F3C02700C75F004BD38A /* test_dict_B5_BD.lz4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_dict_B5_BD.lz4; sourceTree = "<group>"; };
-		E604F3C12700C75F004BD38A /* lz4_dict */ = {isa = PBXFileReference; lastKnownFileType = file; path = lz4_dict; sourceTree = "<group>"; };
-		E609D7B2271AFAA400068E79 /* lz4_small_dict */ = {isa = PBXFileReference; lastKnownFileType = file; path = lz4_small_dict; sourceTree = "<group>"; };
+		E604F3C12700C75F004BD38A /* lz4_dict */ = {isa = PBXFileReference; lastKnownFileType = text; path = lz4_dict; sourceTree = "<group>"; };
+		E609D7B2271AFAA400068E79 /* lz4_small_dict */ = {isa = PBXFileReference; lastKnownFileType = text; path = lz4_small_dict; sourceTree = "<group>"; };
 		E609D7B3271AFAA400068E79 /* test_small_dict_B5_BD.lz4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_small_dict_B5_BD.lz4; sourceTree = "<group>"; };
 		E609D7B4271AFAA400068E79 /* test_small_dict_B5.lz4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_small_dict_B5.lz4; sourceTree = "<group>"; };
 		E60CBA8926AF379200A20130 /* test_only_dir_header.tar */ = {isa = PBXFileReference; lastKnownFileType = archive.tar; path = test_only_dir_header.tar; sourceTree = "<group>"; };
@@ -1105,6 +1105,9 @@
 			dependencies = (
 			);
 			name = SWCompression;
+			packageProductDependencies = (
+				EEAEA2A927EB280200EE8745 /* BitByteData */,
+			);
 			productName = SWCompression;
 			productReference = 06BE1AC81DB410F100EE0F59 /* SWCompression.framework */;
 			productType = "com.apple.product-type.framework";
@@ -1134,6 +1137,7 @@
 		06BE1ABF1DB410F100EE0F59 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Latest;
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 1330;
 				ORGANIZATIONNAME = "Timofey Solomko";
@@ -1157,6 +1161,9 @@
 				Base,
 			);
 			mainGroup = 06BE1ABE1DB410F100EE0F59;
+			packageReferences = (
+				EEAEA2A827EB280200EE8745 /* XCRemoteSwiftPackageReference "BitByteData" */,
+			);
 			productRefGroup = 06BE1AC91DB410F100EE0F59 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1767,6 +1774,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EEAEA2A827EB280200EE8745 /* XCRemoteSwiftPackageReference "BitByteData" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tsolomko/BitByteData";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EEAEA2A927EB280200EE8745 /* BitByteData */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEAEA2A827EB280200EE8745 /* XCRemoteSwiftPackageReference "BitByteData" */;
+			productName = BitByteData;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 06BE1ABF1DB410F100EE0F59 /* Project object */;
 }

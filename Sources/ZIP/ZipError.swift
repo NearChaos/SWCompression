@@ -35,4 +35,6 @@ public enum ZipError: Error {
     case wrongCRC([ZipEntry])
     /// Either entry's comment or file name cannot be processed using UTF-8 encoding.
     case wrongTextField
+    /// Entry not found in directory
+    case entryNotFound
 }
